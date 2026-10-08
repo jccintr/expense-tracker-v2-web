@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Alert, Button, Label, TextInput } from 'flowbite-react';
+import { Alert, Button, Label, TextInput, Spinner } from 'flowbite-react';
 import { useAuth } from '../../context/AuthContext';
 import { fetchCurrentUser, login } from '../../api/authApi';
 import PasswordInput from '../../components/PasswordInput';
@@ -78,7 +78,7 @@ export default function LoginPage() {
         disabled={loading}
         className="mt-2 bg-primary! dark:bg-primary! text-primary-ink! enabled:hover:opacity-90"
       >
-        Entrar
+        {loading ? <Spinner size="sm" /> : 'Entrar'}
       </Button>
 
       <p className="text-center text-sm text-text-soft">
