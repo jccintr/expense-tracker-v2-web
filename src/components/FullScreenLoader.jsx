@@ -1,0 +1,9 @@
+import { Spinner } from 'flowbite-react';
+
+export default function FullScreenLoader() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <Spinner size="xl" />
+    </div>
+  );
+}
